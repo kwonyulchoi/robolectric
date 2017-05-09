@@ -11,7 +11,8 @@ import java.util.BitSet;
 public class ShadowWifiConfiguration {
   @RealObject private WifiConfiguration realObject;
 
-  public void __constructor__() {
+  @Implementation
+  protected void __constructor__() {
     realObject.networkId = -1;
     realObject.SSID = null;
     realObject.BSSID = null;
