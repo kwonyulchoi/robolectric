@@ -128,11 +128,13 @@ public class ShadowViewGroup extends ShadowView {
   public static class ShadowLayoutParams {
     @RealObject private ViewGroup.LayoutParams realLayoutParams;
 
+    @Implementation
     public void __constructor__(int w, int h) {
       realLayoutParams.width = w;
       realLayoutParams.height = h;
     }
 
+    @Implementation
     public void __constructor__(ViewGroup.LayoutParams source) {
       __constructor__(source.width, source.height);
     }

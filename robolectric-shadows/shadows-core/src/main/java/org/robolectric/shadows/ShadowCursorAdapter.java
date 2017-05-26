@@ -75,15 +75,18 @@ public class ShadowCursorAdapter extends ShadowBaseAdapter {
   protected DataSetObserver mDataSetObserver;
   protected FilterQueryProvider mFilterQueryProvider;
 
+  @Implementation
   public void __constructor__(Context context, Cursor c) {
     initialize(context, c, FLAG_AUTO_REQUERY);
   }
 
+  @Implementation
   public void __constructor__(Context context, Cursor c, boolean autoRequery) {
     initialize(context, c, autoRequery ? FLAG_AUTO_REQUERY : FLAG_REGISTER_CONTENT_OBSERVER);
   }
 
   // Recommended constructor for API level 11+
+  @Implementation
   public void __constructor__(Context context, Cursor c, int flags) {
     initialize(context, c, flags);
   }

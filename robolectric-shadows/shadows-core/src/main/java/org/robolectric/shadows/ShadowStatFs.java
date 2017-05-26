@@ -19,6 +19,7 @@ public class ShadowStatFs {
   private static Map<String, Stats> stats = new HashMap<String, Stats>();
   private Stats stat;
 
+  @Implementation
   public void __constructor__(String path) {
     restat(path);
   }

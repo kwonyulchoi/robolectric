@@ -66,6 +66,7 @@ public class ShadowActivity extends ShadowContextThemeWrapper {
   private Menu optionsMenu;
   private ComponentName callingActivity;
 
+  @Implementation
   public void __constructor__() {
     invokeConstructor(Activity.class, realActivity);
   }
